@@ -6,12 +6,14 @@ vector<vector<int>> g[N];
 int cost = 0;
 vector<int> dist(N);
 vector<int> parent(N);
+//making a  vector to keep a check on every step that either the current node is visited or not 
 vector<bool> vis(N);
 const int INF = 1e9;
 void primsMST(int source)
 {
     for (int i = 1; i < n; i++)
     {
+        //By default the distance will be Infinity 
         dist[i] = INF;
     }
     set<vector<int>> s;
@@ -49,6 +51,7 @@ int main()
     {
         int u, v, w;
         cin >> u >> v >> w;
+        //Insering in the vector<vector <int >> "Pair of a vector "
         g[u].push_back({v, w});
         g[v].push_back({u, w});
     }
