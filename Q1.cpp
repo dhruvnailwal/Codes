@@ -6,6 +6,7 @@ int main()
     cout << "Enter the number of vertex" << endl;
     cin >> v;
     int arr[v][v];
+    //Taking input for  the adjacency matrix
     for (int i = 1; i <= v; i++)
     {
         for (int j = 1; j <= v; j++)
@@ -24,6 +25,7 @@ int main()
             }
         }
     }
+    //Displaying the adjacnecy matrix
     for (int i = 1; i <= v; i++)
     {
         for (int j = 1; j <= v; j++)
